@@ -11,7 +11,7 @@
 }
 
 /* ================================= 
-  Button Transitions
+	Button Transitions
 ==================================== */
 
 .button {
@@ -23,25 +23,61 @@
 }
 
 /* ================================= 
-  Image Transforms & Transitions
+	Image Transforms & Transitions
 ==================================== */
 
 /* -- Row 1 --------- */
 
+img {
+	transition: transform 0.5s;
+	transform-origin: 50% 50%;
+}
 
+img:hover {
+	transform: rotate(25deg);
+	transform: skewX(-10deg);
+	transform: skewY(10deg);
+	transform: scale(1.1);
+	transform: translateX(-50px);
+	transform: translateY(100%);
+	transform: translate(-50px,100%);
+	transform: rotate(-5deg) scale(1.1) translateY(-20px);
+}
 
 /* -- Row 2 --------- */
 
+.photo img {
+	transform-origin: 0 0;
+}
 
+.photo:hover img {
+	transform: scale(1.2);
+}
 
 /* -- Row 3 --------- */
 
+.slide .photo-overlay,
+.slide img {
+	transition: transform .6s ease-out;
+}
 
+.slide .photo-overlay {
+	transform: translateX(-100%);
+}
+
+.slide:hover .photo-overlay {
+	transform: translateX(0);
+}
+
+.slide:hover img {
+	transform: translateX(100%);
+}
 
 /* -- Logo ---------- */
 
-
-
+.logo:hover {
+	transform: rotate(-25deg);
+}
 
 
 
